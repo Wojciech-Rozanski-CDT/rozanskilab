@@ -24,10 +24,6 @@ METADATA
           {
             "field": "Microsoft.Compute/virtualMachines/storageProfile.osDisk.osType",
             "equals": "Windows"
-          },
-          {
-            "field": "identity.type",
-            "contains": "SystemAssigned"
           }
         ]
       },
@@ -145,10 +141,6 @@ METADATA
           {
             "field": "Microsoft.Compute/virtualMachines/storageProfile.osDisk.osType",
             "equals": "Linux"
-          },
-          {
-            "field": "identity.type",
-            "contains": "SystemAssigned"
           }
         ]
       },
