@@ -76,7 +76,7 @@ resource "azurerm_monitor_data_collection_rule" "dcr-cdt-detailed" {
 
     performance_counter {
       streams                       = ["Microsoft-InsightsMetrics"]
-      sampling_frequency_in_seconds = 10
+      sampling_frequency_in_seconds = 60
       counter_specifiers = [
         "\\VmInsights\\DetailedMetrics"
       ]
