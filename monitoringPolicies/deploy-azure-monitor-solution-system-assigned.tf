@@ -76,7 +76,7 @@ resource "azurerm_monitor_data_collection_rule" "dcr-cdt-detailed" {
 
     performance_counter {
       streams                       = ["Microsoft-InsightsMetrics"]
-      sampling_frequency_in_seconds = 60
+      sampling_frequency_in_seconds = 10
       counter_specifiers = [
         "\\VmInsights\\DetailedMetrics"
       ]
@@ -396,7 +396,7 @@ resource "azurerm_policy_definition" "AzureDcrAssociation" {
   name         = "AzureDcrAssociation"
   policy_type  = "Custom"
   mode         = "All"
-  display_name = "Configure Virtual Machines Machines to be associated with a Data Collection Rule (CDT custom)"
+  display_name = "Configure Virtual Machines to be associated with a Data Collection Rule (CDT custom)"
   description  = "Deploy Association to link Azure Virtual Machines to the specified Data Collection Rule. This policy was tailored to include all Virtual Machines not only those deployed from the Marketplace to ensure compatibility with L&S machines."
 
   metadata = <<METADATA
@@ -591,6 +591,28 @@ PARAMETERS
   policy_definition_reference {
     policy_definition_id = azurerm_policy_definition.AzureDcrAssociation.id
     reference_id = "Configure Azure Virtual Machines to be associated with a Data Collection Rule (CDT custom)"
+    parameter_values     = <<VALUE
+    {
+      "dcrResourceId": {"value": "[parameters('dcrResourceId')]"},
+      "effect": {"value": "[parameters('effect')]"}
+    }
+    VALUE
+  }
+
+  policy_definition_reference {
+    policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/0a3b9bf4-d30e-424a-af6b-9a93f6f78792"
+    reference_id = "Configure Windows Virtual Machine Scale Sets to be associated with a Data Collection Rule"
+    parameter_values     = <<VALUE
+    {
+      "dcrResourceId": {"value": "[parameters('dcrResourceId')]"},
+      "effect": {"value": "[parameters('effect')]"}
+    }
+    VALUE
+  }
+
+  policy_definition_reference {
+    policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/050a90d5-7cce-483f-8f6c-0df462036dda"
+    reference_id = "Configure Linux Virtual Machine Scale Sets to be associated with a Data Collection Rule"
     parameter_values     = <<VALUE
     {
       "dcrResourceId": {"value": "[parameters('dcrResourceId')]"},

@@ -102,7 +102,7 @@ resource "azurerm_monitor_data_collection_rule" "dcr-cdt-detailed" {
 
     performance_counter {
       streams                       = ["Microsoft-InsightsMetrics"]
-      sampling_frequency_in_seconds = 60
+      sampling_frequency_in_seconds = 10
       counter_specifiers = [
         "\\VmInsights\\DetailedMetrics"
       ]
@@ -1062,6 +1062,32 @@ PARAMETERS
   }
 
   policy_definition_reference {
+    policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/98569e20-8f32-4f31-bf34-0e91590ae9d3"
+    reference_id = "Configure Windows virtual machine scale sets to run Azure Monitor Agent with user-assigned managed identity-based authentication"
+    parameter_values     = <<VALUE
+    {
+      "userAssignedManagedIdentityName": {"value": "[parameters('userAssignedManagedIdentityName')]"},
+      "bringYourOwnUserAssignedManagedIdentity": {"value": "[parameters('bringYourOwnUserAssignedManagedIdentity')]"},
+      "userAssignedManagedIdentityResourceGroup": {"value": "[parameters('userAssignedManagedIdentityResourceGroup')]"},
+      "effect": {"value": "[parameters('effect')]"}
+    }
+    VALUE
+  }
+
+  policy_definition_reference {
+    policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/59c3d93f-900b-4827-a8bd-562e7b956e7c"
+    reference_id = "Configure Linux virtual machine scale sets to run Azure Monitor Agent with user-assigned managed identity-based authentication"
+    parameter_values     = <<VALUE
+    {
+      "userAssignedManagedIdentityName": {"value": "[parameters('userAssignedManagedIdentityName')]"},
+      "bringYourOwnUserAssignedManagedIdentity": {"value": "[parameters('bringYourOwnUserAssignedManagedIdentity')]"},
+      "userAssignedManagedIdentityResourceGroup": {"value": "[parameters('userAssignedManagedIdentityResourceGroup')]"},
+      "effect": {"value": "[parameters('effect')]"}
+    }
+    VALUE
+  }
+
+  policy_definition_reference {
     policy_definition_id = azurerm_policy_definition.AddUserAssignedIdentityForAzMonitor.id
     reference_id = "Add user-assigned managed identity to Virtual Machines to be used by the Azure Monitor Agent (CDT custom)"
     parameter_values     = <<VALUE
@@ -1077,6 +1103,28 @@ PARAMETERS
   policy_definition_reference {
     policy_definition_id = azurerm_policy_definition.AzureDcrAssociation.id
     reference_id = "Configure Virtual Machines to be associated with a Data Collection Rule (CDT custom)"
+    parameter_values     = <<VALUE
+    {
+      "dcrResourceId": {"value": "[parameters('dcrResourceId')]"},
+      "effect": {"value": "[parameters('effect')]"}
+    }
+    VALUE
+  }
+
+  policy_definition_reference {
+    policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/0a3b9bf4-d30e-424a-af6b-9a93f6f78792"
+    reference_id = "Configure Windows Virtual Machine Scale Sets to be associated with a Data Collection Rule"
+    parameter_values     = <<VALUE
+    {
+      "dcrResourceId": {"value": "[parameters('dcrResourceId')]"},
+      "effect": {"value": "[parameters('effect')]"}
+    }
+    VALUE
+  }
+
+  policy_definition_reference {
+    policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/050a90d5-7cce-483f-8f6c-0df462036dda"
+    reference_id = "Configure Linux Virtual Machine Scale Sets to be associated with a Data Collection Rule"
     parameter_values     = <<VALUE
     {
       "dcrResourceId": {"value": "[parameters('dcrResourceId')]"},
