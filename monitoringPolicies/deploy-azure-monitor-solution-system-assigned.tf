@@ -584,6 +584,26 @@ PARAMETERS
   }
 
   policy_definition_reference {
+    policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/4efbd9d8-6bc6-45f6-9be2-7fe9dd5d89ff"
+    reference_id = "Configure Windows virtual machine scale sets to run Azure Monitor Agent using system-assigned managed identity"
+    parameter_values     = <<VALUE
+    {
+      "effect": {"value": "[parameters('effect')]"}
+    }
+    VALUE
+  }
+
+  policy_definition_reference {
+    policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/56a3e4f8-649b-4fac-887e-5564d11e8d3a"
+    reference_id = "Configure Linux virtual machine scale sets to run Azure Monitor Agent with system-assigned managed identity-based authentication"
+    parameter_values     = <<VALUE
+    {
+      "effect": {"value": "[parameters('effect')]"}
+    }
+    VALUE
+  }
+
+  policy_definition_reference {
     policy_definition_id = azurerm_policy_definition.AddSystemAssignedIdentity.id
     reference_id = "Add system-assigned managed identity to Virtual Machines (CDT custom)"
   }
