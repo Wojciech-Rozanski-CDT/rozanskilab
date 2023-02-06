@@ -39,7 +39,11 @@ resource "azurerm_linux_web_app" "linux_web_app" {
     minimum_tls_version = var.minimum_tls_version
     scm_minimum_tls_version = var.scm_minimum_tls_version
 
+    vnet_route_all_enabled = var.vnet_route_all_enabled
+
   }
+
+  virtual_network_subnet_id = var.virtual_network_subnet_id 
 
   identity {
     type = var.identity_type
@@ -55,34 +59,12 @@ resource "azurerm_monitor_diagnostic_setting" "diagnostic_setting" {
   target_resource_id = azurerm_linux_web_app.linux_web_app.id
   log_analytics_workspace_id  = var.azurerm_log_analytics_workspace_id
 
-  log {
-    category = "AppServiceAppLogs"
-    enabled = var.AppServiceAppLogs_enabled
-  }
-
-  log {
-    category = "AppServiceAuditLogs"
-    enabled = var.AppServiceAuditLogs_enabled
-  }
-
-  log {
-    category = "AppServiceConsoleLogs"
-    enabled = var.AppServiceConsoleLogs_enabled
-  }
-
-  log {
-    category = "AppServiceHTTPLogs"
-    enabled = var.AppServiceHTTPLogs_enabled
-  }
-
-  log {
-    category = "AppServiceIPSecAuditLogs"
-    enabled = var.AppServiceIPSecAuditLogs_enabled
-  }
-
-  log {
-    category = "AppServicePlatformLogs"
-    enabled = var.AppServicePlatformLogs_enabled
+  dynamic "enabled_log" {
+    iterator = log_category_type
+    for_each = var.diagnostic_categories
+    content { 
+      category = log_category_type.value
+    }
   }
 
   metric {

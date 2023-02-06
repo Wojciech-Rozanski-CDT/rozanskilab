@@ -138,47 +138,37 @@ variable "identity_ids" {
     description = "A list of User Assigned Managed Identity IDs to be assigned to this Linux Web App Slot."
 }
 
+variable "virtual_network_subnet_id" {
+  type = string
+  description = "ID of the subnet used with VNET integration"
+}
+
+variable "vnet_route_all_enabled" {
+  type = bool
+  description = "Choice whether public traffic from the App should be routed through the VNET Integration subnet"
+}
+
 variable "tags" {
   type        = map(string)
   description = "Labels to be attached to resources"
 }
 
-variable "azurerm_log_analytics_workspace_id" {
-    type = string
-    description = "The ID of the Log Analytics Workspace to be used for logging"
-}
-
-variable "AppServiceAppLogs_enabled" {
-    type = string
-    description = "Choice whether the App Service App Logs should be enabled"
-}
-
-variable "AppServiceAuditLogs_enabled" {
-    type = string
-    description = "Choice whether the App Service Audit Logs should be enabled"
-}
-
-variable "AppServiceConsoleLogs_enabled" {
-    type = string
-    description = "Choice whether the App Service Console Logs should be enabled"
-}
-
-variable "AppServiceHTTPLogs_enabled" {
-    type = string
-    description = "Choice whether the App Service HTTP Logs should be enabled"
-}
-
-variable "AppServiceIPSecAuditLogs_enabled" {
-    type = string
-    description = "Choice whether the App Service IPSec Audit Logs should be enabled"
-}
-
-variable "AppServicePlatformLogs_enabled" {
-    type = string
-    description = "Choice whether the App Service Platform Logs should be enabled"
+variable "diagnostic_categories" {
+    type = list(string)
+    description = "The set of diagnostic categories to be configured for diagnostic settings. Possible values are: AppServiceAppLogs, AppServiceAuditLogs, AppServiceConsoleLogs, AppServiceHTTPLogs, AppServiceIPSecAuditLogs, AppServicePlatformLogs"
+    default = [
+        "AppServiceAppLogs",
+        "AppServiceHTTPLogs"
+    ]
 }
 
 variable "metric_category" {
     type = string
     description = "Choice whether the Metrics should be collected"
+    default = "AllMetrics"
+}
+
+variable "azurerm_log_analytics_workspace_id" {
+    type = string
+    description = "The ID of the Log Analytics Workspace to be used for logging"
 }
