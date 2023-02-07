@@ -1,22 +1,6 @@
-data "azurerm_resource_group" "example" {
-  name     = var.azure_monitor_action_group_rg
-}
-
-/*
-
-data "azurerm_log_analytics_workspace" "example" {
-    name = var.itsm_log_analytics_workspace_name
-    resource_group_name = var.itsm_log_analytics_workspace_rg
-}
-
-*/
-
-data "azurerm_client_config" "current" {
-}
-
 resource "azurerm_monitor_action_group" "this" {
   name                = var.action_group_name
-  resource_group_name = data.azurerm_resource_group.example.name
+  resource_group_name = var.azure_monitor_action_group_rg
   short_name          = var.action_group_short_name
 
   dynamic "arm_role_receiver" {
@@ -48,19 +32,5 @@ resource "azurerm_monitor_action_group" "this" {
     }
     
   }
-
-/*
-
-  itsm_receiver {
-    name                 = var.itsm_receiver_name
-    workspace_id         = "${data.azurerm_client_config.current.subscription_id}|${data.azurerm_log_analytics_workspace.example.workspace_id}"
-    connection_id        = var.connection_id
-    ticket_configuration = var.ticket_configuration
-    region               = var.itsm_log_analytics_workspace_region
-  }
-
-*/
-
-  
 
 }
