@@ -1,6 +1,6 @@
 resource "azurerm_monitor_activity_log_alert" "this" {
-  name                = var.alert_health
-  resource_group_name = data.azurerm_resource_group.example.name
+  name                = var.alert_name
+  resource_group_name = var.alert_rg
   scopes              = [data.azurerm_subscription.current.id]
   description         = var.alert_description
 
@@ -9,7 +9,7 @@ resource "azurerm_monitor_activity_log_alert" "this" {
 	  operation_name = var.operation_name
     resource_provider = var.category == "ResourceHealth" ? var.resource_provider : null
     resource_type = var.category == "ResourceHealth" ? var.resource_type : null
-    resource_group = var.category == "ResourceHealth" ? var.alert_resource_group : null
+    resource_group = var.category == "ResourceHealth" ? var.monitored_resource_group : null
     resource_id = var.category == "ResourceHealth" ? var.resource_id : null
     caller = var.category == "Administrative" || var.category == "Policy" || var.category == "Security" ? var.caller : null
     level = var.level
@@ -32,7 +32,7 @@ resource "azurerm_monitor_activity_log_alert" "this" {
         content {
             current = var.resource_health_current
             previous = var.resource_health_previous
-            reason = var.resource_healt_reason
+            reason = var.resource_health_reason
         }
     }
 	

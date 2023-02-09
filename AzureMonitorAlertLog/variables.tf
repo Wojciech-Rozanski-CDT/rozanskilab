@@ -1,4 +1,4 @@
-variable "alert_health" {
+variable "alert_name" {
   type        = string
   description = "A descriptive name of the new activity log alert"
 }
@@ -6,6 +6,11 @@ variable "alert_health" {
 variable "alert_description" {
   type        = string
   description = "A more detailed description of the new activity log alert"
+}
+
+variable "alert_rg" {
+  type        = string
+  description = "The Resource Group in which where the alert should be placed"
 }
 
 variable "category" {
@@ -31,7 +36,7 @@ variable "resource_type" {
   default     = null
 }
 
-variable "alert_resource_group" {
+variable "monitored_resource_group" {
   type        = string
   description = "The name of resource group monitored by the activity log alert"
   default     = null
@@ -114,7 +119,7 @@ variable "resource_health_previous" {
   default     = null
 }
 
-variable "resource_healt_reason" {
+variable "resource_health_reason" {
   type        = string
   description = "The reason that will log an alert. Possible values are PlatformInitiated (such as a problem with the resource in an affected region of an Azure incident), UserInitiated (such as a shutdown request of a VM) and Unknown"
   default     = null
@@ -123,5 +128,4 @@ variable "resource_healt_reason" {
 variable "action_group_id" {
   type        = string
   description = "The ID of the Action Group"
-  default     = null
 }
