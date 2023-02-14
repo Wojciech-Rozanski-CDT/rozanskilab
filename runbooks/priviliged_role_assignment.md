@@ -22,6 +22,6 @@ It is forbidden to assign any roles to indivudal Users.
 
 | User | Group | JIRA Ticket |
 |------|-------|-------------|
-|      |       |             |
+| wr@cloudeteer.de     | AZR-Lighouse_BlahBlah      | ##########            |
 |      |       |             |
 |      |       |             |
