@@ -7,13 +7,14 @@ This document consists of two tables.
 The first table should be used to track which groups have been given permissions to which resources.
 The second table should be used to track which Users have been added to different groups.
 
-It is forbidden to assign any roles 
+It is forbidden to assign any roles without a valid JIRA ticket first.
+It is forbidden to assign any roles to indivudal Users. 
 
 ## Group -> Role Tracker
 
 | Scope | Group | User | Role | JIRA Ticket |
 |-------|-------|------|------|-------------|
-|       |       |      |      |             |
+| /subscriptions/cd4eb8cc-a8ef-4d64-a048-1fcdf51495fd |      |wr@cloudeteer.de       |Azure Kubernetes Service RBAC Cluster Admin      |  ########           |
 |       |       |      |      |             |
 |       |       |      |      |             |
 
