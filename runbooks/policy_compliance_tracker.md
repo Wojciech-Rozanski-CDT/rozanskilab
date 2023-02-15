@@ -12,10 +12,19 @@ A list of all JIRA tickets raised to handle the non-compliant resources should b
 
 ## Compliance table
 
+### March 2023
+
 | Name | Scope | Resource Compliance | Non-compliant resources | Non-compliant policies | Delta |
 |:----:|------:|---------------------|-------------------------|------------------------|-------|
-|CIS Microsoft Azure Foundations Benchmark v1.4.0|Visual Studio Enterprise-Abonnement – MPN|44%|15|22| - |
-|Audit Windows machines that have extra accounts in the Administrators group|Visual Studio Enterprise-Abonnement – MPN|0%|1|1| - |
+|ASC Default (subscription: cd4eb8cc-a8ef-4d64-a048-1fcdf51495fd)|11%|16|66|-1%|
+|CIS Microsoft Azure Foundations Benchmark v1.4.0|Visual Studio Enterprise-Abonnement – MPN|57%|15|22|+13%|
+
+### February 2023
+
+| Name | Scope | Resource Compliance | Non-compliant resources | Non-compliant policies | Delta |
+|:----:|------:|---------------------|-------------------------|------------------------|-------|
+|ASC Default (subscription: cd4eb8cc-a8ef-4d64-a048-1fcdf51495fd)|12%|15|66| - |
+|CIS Microsoft Azure Foundations Benchmark v1.4.0|Visual Studio Enterprise-Abonnement – MPN|44%|10|35| - |
 
 ## JIRA Tickets
 
