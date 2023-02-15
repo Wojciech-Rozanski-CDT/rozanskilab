@@ -23,7 +23,7 @@ A list of all JIRA tickets raised to handle the non-compliant resources should b
 
 | Name | Scope | Resource Compliance | Non-compliant resources | Non-compliant policies | Delta |
 |:----:|------:|---------------------|-------------------------|------------------------|-------|
-|ASC Default (subscription: cd4eb8cc-a8ef-4d64-a048-1fcdf51495fd)|12%|15|66| - |
+|ASC Default (subscription: cd4eb8cc-a8ef-4d64-a048-1fcdf51495fd)|Visual Studio Enterprise-Abonnement – MPN|12%|15|66| - |
 |CIS Microsoft Azure Foundations Benchmark v1.4.0|Visual Studio Enterprise-Abonnement – MPN|44%|10|35| - |
 
 ## JIRA Tickets
