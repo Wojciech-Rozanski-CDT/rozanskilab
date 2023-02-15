@@ -1,4 +1,4 @@
-# Priviliged Role Assignment Tracker
+# Policy Compliance Tracker
 
 ## Background
 
@@ -8,7 +8,7 @@ But just assigning the policies is not enough. There is no purpose in auditing t
 This document will be used to track the compliance of policy assignments across the Client's subscriptions.
 The table should be copied over on a monthly basis, with new policy assignments being added at the bottom, and a delta from the existing assignments is calculated. 
 
-A list of all JIRA tickets raised to handle the non-compliant resources should be kept for reference.
+A list of all JIRA tickets raised to handle the non-compliant resources should be kept for reference and updated each time a ticket is raised.
 
 ## Compliance table
 
@@ -26,9 +26,15 @@ A list of all JIRA tickets raised to handle the non-compliant resources should b
 |ASC Default (subscription: cd4eb8cc-a8ef-4d64-a048-1fcdf51495fd)|Visual Studio Enterprise-Abonnement – MPN|12%|15|66| - |
 |CIS Microsoft Azure Foundations Benchmark v1.4.0|Visual Studio Enterprise-Abonnement – MPN|44%|10|35| - |
 
-## JIRA Tickets
+## JIRA Tickets - Remediation
 
-| Ticket Number | Policy Name | Resources Affected | Decision |
-|:-------------:|------------:|-------------------:|---------:|
-| XXXXXX | CIS Microsoft Azure Foundations Benchmark v1.4.0 | lin-defender | Remediation|
-| XXXXXX | CIS Microsoft Azure Foundations Benchmark v1.4.0 | win-defender | Exemption - Waiver|
+| Ticket Number | Initiative | Policy | Resources Affected | Decision |
+|:-------------:|-----------:|------------:|-------------------:|---------:|
+| XXXXXX | CIS Microsoft Azure Foundations Benchmark v1.4.0 | Virtual machines should encrypt temp disks, caches, and data flows between Compute and Storage resources | lin-defender | Remediation |
+
+
+## JIRA Tickets - Exemption
+
+| Ticket Number | Initiative | Policy | Resources Affected | Decision |
+|:-------------:|-----------:|------------:|-------------------:|---------:|
+| XXXXXX | CIS Microsoft Azure Foundations Benchmark v1.4.0 | Only approved VM extensions should be installed | win-defender | This machine can have the xxx extension installed  |
