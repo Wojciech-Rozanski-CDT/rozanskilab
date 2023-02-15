@@ -28,8 +28,7 @@ A list of all JIRA tickets raised to handle the non-compliant resources should b
 
 ## JIRA Tickets
 
-| Ticket Number | Policy Name | Scope | Resources Affected | Decision |
-|:-------------:|------------:|------:|-------------------:|---------:|
-|               |             |       |                    |          |
-|               |             |       |                    |          |
-|               |             |       |                    |          |
+| Ticket Number | Policy Name | Resources Affected | Decision |
+|:-------------:|------------:|-------------------:|---------:|
+| XXXXXX | CIS Microsoft Azure Foundations Benchmark v1.4.0 | lin-defender | Remediation|
+| XXXXXX | CIS Microsoft Azure Foundations Benchmark v1.4.0 | win-defender | Exemption - Waiver|
