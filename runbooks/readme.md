@@ -13,4 +13,5 @@ To perform this check, the following steps need to be completed:
 4) Run the  *winget search Microsoft.PowerShell* command
 5) If the found version is newer than the one installed, run the *winget install --id Microsoft.Powershell --source winget* command.
 6) Reboot the PC after the installation
-7) Verify if Powershell has been upgraded with the *$PSversionTable.PsVersion* command
+
+After the installation there might be two version of Powershell installed. 
