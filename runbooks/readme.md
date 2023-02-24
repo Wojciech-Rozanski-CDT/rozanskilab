@@ -4,14 +4,12 @@ Some of the daily tasks require usage of Powershell.
 
 ## Installing Powershell on Windows
 
-Powershell is installed by default on all Windows systems. It is recommended to ensure that the latest stable version is present, and upgrade if necessary.
-To perform this check, the following steps need to be completed:
+https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3
 
-1) Open Poweshell as administrator
-2) Run the *$PSversionTable.PsVersion* command
-3) Check the existing major and minor version
-4) Run the  *winget search Microsoft.PowerShell* command
-5) If the found version is newer than the one installed, run the *winget install --id Microsoft.Powershell --source winget* command.
-6) Reboot the PC after the installation
+## Installing Powershell on MAC
 
-After the installation there might be two version of Powershell installed. 
+https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-macos?view=powershell-7.3
+
+## Using Powershell with Visual Studio Code (applies to both MAC and Linux)
+
+https://learn.microsoft.com/en-us/powershell/scripting/dev-cross-plat/vscode/using-vscode?view=powershell-7.3
