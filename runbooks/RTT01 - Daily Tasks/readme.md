@@ -29,6 +29,4 @@ Successful completion of the outlined tasks will ensure that Cloudeteer offers t
 
 | Date | RTT01-1 | RTT01-2 | RTT01-3 | RTT01-4 | RTT01-5 |
 |:----:|--------:|---------|---------|---------|---------|
-|      |   []    |   []    |   []    |   []    |   []    | 
-|      |   []    |   []    |   []    |   []    |   []    | 
-|      |   []    |   []    |   []    |   []    |   []    | 
+|      | &check; | &check; | &check; | &check; | &check; | 
