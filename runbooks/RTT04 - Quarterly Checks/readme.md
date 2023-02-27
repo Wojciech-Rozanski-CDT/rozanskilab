@@ -8,7 +8,7 @@
 
 # Background
 
-[Description needed]
+Successful completion of the outlined tasks will ensure that Cloudeteer offers the best possible service as agreed in the [Cloud.GO/Cloud.PRO] Managed Service contract.
 
 # Schedule / Process
 
