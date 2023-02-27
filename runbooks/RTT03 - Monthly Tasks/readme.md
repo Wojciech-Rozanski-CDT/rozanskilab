@@ -6,6 +6,10 @@
 ## For Customers without CDT Lighthouse Onboardiong:
 - [x] Relevant User account in the Customer tenant with the required permissions
 
+# Background
+
+Successful completion of the outlined tasks will ensure that Cloudeteer offers the best possible service as agreed in the [Cloud.GO/Cloud.PRO] Managed Service contract.
+
 # Schedule / Process
 
 * Some of these tasks have to be performed every month starting xxx and going indefinitely until canceled by the customers squad lead.
