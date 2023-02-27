@@ -16,3 +16,18 @@ Successful completion of the outlined tasks will ensure that Cloudeteer offers t
 * These tasks should start on the first working day of the given month, and completed at latest until EOB on the last working day of the week.
 * Service Management ensures on-time completion of this ticket and that the assignee is available (no holiday/illness/OOO).
 * Book your efforts to `xxx` . If you do not have access to this, contact the customers Squad Lead or COO.
+
+# Escalation Contacts
+
+- Squad Lead
+- Azure Chapter
+
+# Client Contacts
+
+[Insert Client contacts here]
+
+# Completion Tracker
+
+| Date | RTT03-1 | RTT03-2 | RTT03-3 | RTT03-4 | RTT03-5 | RTT03-6 | RTT03-7 | RTT03-8 | RTT03-9 |
+|:----:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
+|      | &check; | &check; | &check; | &check; | &check; | &check; | &check; | &check; | &check; | 
