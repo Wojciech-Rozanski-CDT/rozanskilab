@@ -1,7 +1,5 @@
 ## RTT02-4 Check patch status
 
-Included in: Cloud.PRO Managed Compute
-
 ### Access / Permission Level
 
 | Required AAD role | Required RBAC role     |

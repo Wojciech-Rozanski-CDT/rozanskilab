@@ -1,7 +1,5 @@
 ## RTT02-2 Check for policy compliance
 
-Included in: To be verfified
-
 ### Access / Permission Level
 
 | Required AAD role | Required RBAC role     |

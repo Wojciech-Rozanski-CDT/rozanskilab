@@ -1,7 +1,5 @@
 ## RTT02-1 Check for planned maintenance
 
-Included in: Cloud.GO
-
 ### Access / Permission Level
 
 | Required AAD role | Required RBAC role     |

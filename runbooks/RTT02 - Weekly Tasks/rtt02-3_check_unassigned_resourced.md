@@ -1,7 +1,5 @@
 ## RTT02-3 Check for unassigned resources
 
-Included in: Cloud.GO
-
 ### Access / Permission Level
 
 | Required AAD role | Required RBAC role     |
