@@ -8,7 +8,7 @@
 
 # Background
 
-[Description needed]
+Successful completion of the outlined tasks will ensure that Cloudeteer offers the best possible service as agreed in the [Cloud.GO/Cloud.PRO] Managed Service contract.
 
 # Schedule / Process
 
@@ -22,3 +22,11 @@
 - Azure Chapter
 
 # Client Contacts
+
+[Insert Client contacts here]
+
+# Completion Tracker
+
+| Date | RTT01-1 | RTT01-2 | RTT01-3 | RTT01-4 | RTT01-5 |
+|:----:|:-------:|:-------:|:-------:|:-------:|:-------:|
+|      | &check; | &check; | &check; | &check; | &check; | 

@@ -8,7 +8,7 @@
 
 # Background
 
-[Description needed]
+Successful completion of the outlined tasks will ensure that Cloudeteer offers the best possible service as agreed in the [Cloud.GO/Cloud.PRO] Managed Service contract.
 
 # Schedule / Process
 
@@ -16,3 +16,18 @@
 * These tasks should start on the first working day of the given week, and completed at latest until EOB on the second working day of the week.
 * Service Management ensures on-time completion of this ticket and that the assignee is available (no holiday/illness/OOO).
 * Book your efforts to `xxx` . If you do not have access to this, contact the customers Squad Lead or COO.
+
+# Escalation Contacts
+
+- Squad Lead
+- Azure Chapter
+
+# Client Contacts
+
+[Insert Client contacts here]
+
+# Completion Tracker
+
+| Date | RTT02-1 | RTT02-2 | RTT02-3 | RTT02-4 |
+|:----:|:-------:|:-------:|:-------:|:-------:|
+|      | &check; | &check; | &check; | &check; |
