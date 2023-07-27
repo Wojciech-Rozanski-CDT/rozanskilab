@@ -1,4 +1,4 @@
-## RTT02-3 Check for unassigned resources
+## RTT02-2 Check for unassigned resources
 
 ### Access / Permission Level
 

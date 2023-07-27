@@ -1,4 +1,4 @@
-## RTT02-4 Check patch status
+## RTT02-3 Check patch status
 
 ### Access / Permission Level
 

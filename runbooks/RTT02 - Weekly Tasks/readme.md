@@ -28,6 +28,6 @@ Successful completion of the outlined tasks will ensure that Cloudeteer offers t
 
 # Completion Tracker
 
-| Date | RTT02-1 | RTT02-2 | RTT02-3 | RTT02-4 |
-|:----:|:-------:|:-------:|:-------:|:-------:|
-|      | &check; | &check; | &check; | &check; |
+| Date | RTT02-1 | RTT02-2 | RTT02-3 |
+|:----:|:-------:|:-------:|:-------:|
+|      | &check; | &check; | &check; |
